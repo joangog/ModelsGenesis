@@ -6,12 +6,12 @@ Author: Jon Deaton (jdeaton@stanford.edu)
 """
 
 import io
-import BraTS
+import DataSet
 import timeit
 import cProfile, pstats
 
-BraTS.set_root("/Users/jonpdeaton/Datasets/BraTS")
-brats = BraTS.DataSet(year=2017)
+brats_root = "/home/ioanna/PycharmProjects/uva-thesis/data"
+brats = DataSet.DataSet(brats_root=brats_root, year=2017)
 
 
 def load():

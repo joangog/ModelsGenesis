@@ -7,10 +7,10 @@ class bms_config:
     arch = 'Vnet'
     
     # data
-    data = '/mnt/dataset/shared/zongwei/BraTS'
-    csv = "data/bms"
+    data = '/home/ioanna/PycharmProjects/uva-thesis/data/BraTS2017'
+    csv = '/home/ioanna/PycharmProjects/ModelsGenesis/keras_1/downstream_tasks/data/bms'
     deltr = 30
-    input_rows = 64 
+    input_rows = 64
     input_cols = 64
     input_deps = 32
     crop_rows = 100

@@ -8,6 +8,7 @@ Generic information about the different image types
 available in the BraTS data sets.
 """
 
+import os
 from BraTS.load_utils import *
 
 from enum import Enum
