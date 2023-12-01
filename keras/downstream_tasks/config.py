@@ -8,7 +8,7 @@ class bms_config:
     
     # data
     data = '/home/ioanna/PycharmProjects/uva-thesis/data/BraTS2017'
-    csv = '/home/ioanna/PycharmProjects/ModelsGenesis/keras_1/downstream_tasks/data/bms'
+    csv = '/home/ioanna/PycharmProjects/ModelsGenesis/keras/downstream_tasks/data/bms'
     deltr = 30
     input_rows = 64
     input_cols = 64
