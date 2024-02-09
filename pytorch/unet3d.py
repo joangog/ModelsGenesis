@@ -47,7 +47,6 @@ def _make_nConv(in_channel, depth, act, double_chnnel=False):
 
     return nn.Sequential(layer1,layer2)
 
-
 # class InputTransition(nn.Module):
 #     def __init__(self, outChans, elu):
 #         super(InputTransition, self).__init__()
@@ -108,10 +107,10 @@ class OutputTransition(nn.Module):
 class UNet3D(nn.Module):
     # the number of convolutions in each layer corresponds
     # to what is in the actual prototxt, not the intent
-    def __init__(self, n_class=1, act='relu'):
+    def __init__(self, in_chann=1, n_class=1, act='relu'):
         super(UNet3D, self).__init__()
 
-        self.down_tr64 = DownTransition(1,0,act)
+        self.down_tr64 = DownTransition(in_chann,0,act)
         self.down_tr128 = DownTransition(64,1,act)
         self.down_tr256 = DownTransition(128,2,act)
         self.down_tr512 = DownTransition(256,3,act)
@@ -133,3 +132,4 @@ class UNet3D(nn.Module):
         self.out = self.out_tr(self.out_up_64)
 
         return self.out
+
